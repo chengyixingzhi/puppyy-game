@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小狗和好吗</title>
+    <style>
+        body { text-align: center; font-family: 'Arial', sans-serif; background-color: #f0f8ff; }
+        .container { margin-top: 50px; }
+        img { width: 200px; }
+        h2 { color: #555; }
+        .buttons { margin-top: 20px; }
+        button { font-size: 18px; padding: 10px 20px; margin: 10px; border-radius: 10px; border: none; cursor: pointer; }
+        .yes { background-color: #ff9999; color: white; }
+        .no { background-color: #99ccff; color: white; position: relative; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="热情小狗.png" alt="可爱小狗">
+        <h2>可以跟小狗和好吗？</h2>
+        <div class="buttons">
+            <button class="yes" onclick="agree()">和好</button>
+            <button class="no" onmouseover="runAway()">不要</button>
+        </div>
+    </div>
+
+    <script>
+        function agree() {
+            alert("嘿嘿，小狗开心了！🥰");
+        }
+
+        function runAway() {
+            let noButton = document.querySelector(".no");
+            let randomX = Math.random() * window.innerWidth - 100;
+            let randomY = Math.random() * window.innerHeight - 50;
+            noButton.style.position = "absolute";
+            noButton.style.left = randomX + "px";
+            noButton.style.top = randomY + "px";
+        }
+    </script>
+</body>
+</html>
